@@ -1,0 +1,139 @@
+* {
+  transition: 0.5s;
+}
+
+body .card section h1, body .card section header span {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+}
+
+body .card section h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+html, body, h1, h2, h3, ul, ol, li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #efefef;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: light;
+}
+body .card {
+  background-color: white;
+  height: 30rem;
+  width: 22rem;
+  box-shadow: 0px 0px 3px #cccccc;
+}
+body .card section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+body .card section header {
+  background-image: url(chocolate.jpg);
+  background-size: 200% auto;
+  background-position: top center;
+  height: 90%;
+  position: relative;
+  margin-bottom: 2.1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  position: relative;
+}
+body .card section header span {
+  border-radius: 100px;
+  width: 2em;
+  height: 2em;
+  line-height: 1;
+  text-align: center;
+  align-self: flex-end;
+  margin: 1rem;
+  z-index: 4;
+}
+body .card section h1 {
+  width: fit-content;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  z-index: 3;
+  margin-top: -50px;
+}
+body .card section h2 {
+  font-size: 20px;
+  padding: 1rem 1rem 0;
+  height: 1rem 5;
+}
+body .card section h3 {
+  color: dodgerblue;
+  letter-spacing: 1px;
+  font-size: 16px;
+  padding: 1rem 1rem 0;
+  height: 1rem 5;
+}
+body .card section p {
+  text-align: justify;
+  font-size: 1.1em;
+  height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+body .card section ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-self: flex-end;
+  justify-content: flex-start;
+  font-size: 1.1em;
+  color: #cccccc;
+  padding: 1rem;
+}
+body .card section ul li {
+  padding-right: 1rem;
+  line-height: 1.2;
+}
+body .card section ul li svg {
+  float: left;
+  margin-right: 0.5em;
+}
+body .card:hover {
+  box-shadow: 0px 0px 30px #cccccc;
+}
+body .card:hover header {
+  height: 10rem;
+  background-size: 240% auto;
+  margin-top: -10px;
+}
+body .card:hover header::after {
+  content: " ";
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+body .card:hover p {
+  height: 10rem;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

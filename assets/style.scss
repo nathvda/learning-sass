@@ -1,0 +1,187 @@
+$accent : dodgerblue;
+$gap: 1rem;
+$white: white;
+$grey: #cccccc;
+
+@mixin shadows($blur){
+    box-shadow: 0px 0px $blur $grey;
+}
+
+*{ transition: 0.5s}
+
+%background{ 
+    background-color: $accent;
+    color:$white;
+    padding:$gap;
+ }
+
+ %capitalized{
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:1px;
+ }
+
+html, body, h1, h2, h3, ul, ol, li{
+    padding: 0;
+    margin: 0;
+}
+
+body{ 
+    background-color:#efefef;
+    display:flex;
+    height:100vh;
+    width:100vw;
+    justify-content:center;
+    align-items: center;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+    font: {
+        family:"Montserrat";
+        size: 12px;
+        weight:light;
+    }
+
+    .card{
+        background-color:$white;
+        height:30rem;
+        width:22rem;
+        @include shadows(3px);
+
+        section{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            height:100%;
+
+            header{
+                    background: { 
+                    image:url(chocolate.jpg);
+                    size:200% auto;
+                    position:top center;
+                }
+
+                height: 90%;
+                position:relative;
+                margin-bottom:$gap * 2.1;
+                display:flex;
+                flex-direction:column-reverse;
+                justify-content:flex-end;
+                position:relative;
+    
+                span { 
+                    @extend %background;
+                    border-radius:100px;
+                    width:2em;
+                    height:2em;
+                    line-height:1;
+                    text-align:center;
+                    align-self:flex-end;
+                    margin:($gap);
+                    z-index:4;
+                }            
+            }      
+
+            h1 { 
+                @extend %background;
+                width:fit-content;
+                font-size:1.2em;
+                text-transform:uppercase;
+                z-index:3;
+                margin-top:-50px;
+            }
+
+            h2{
+                @extend %capitalized;
+                font-size:20px;
+                padding:$gap $gap 0;
+                height:$gap 5;
+                }           
+            h3{ 
+               color:$accent;
+               letter-spacing:1px;
+               font-size:16px;
+               padding:$gap $gap 0;
+               height:$gap 5;
+             }
+
+             p{
+                text-align:justify;
+                font-size:1.1em;
+                height:0;
+                overflow:hidden;
+                padding:0 $gap;
+                line-height:1.5;
+             }
+            
+             ul{
+                list-style-type:none;
+                display:flex;
+                width:100%;
+                justify-self: flex-end;
+                justify-content:flex-start;
+                font-size:1.1em;
+                color:$grey;
+                padding:$gap;
+
+            li{  
+                padding-right:$gap;
+                line-height:1.2;
+
+                svg{ 
+            float:left;
+            margin-right: 0.5em;
+                }
+             }
+
+            }
+
+
+            
+
+
+
+         }
+
+         
+         &:hover{ 
+            @include shadows(30px);
+    
+            header{
+                    height: $gap * 10;
+                    background-size: 240% auto;
+                    margin-top:-10px;
+
+                    &::after{
+                        content:" ";
+                        display:block;
+                        background-color:$white;
+                        opacity:0.5;    
+                        height:100%;       
+                        width:100%;
+                        top:0;
+                        bottom:0;
+                        position:absolute;
+                    }
+                  
+                }
+
+                p{
+                    height: $gap * 10;
+                   font-size:$gap;
+                }
+
+            
+    
+        
+    
+            }
+       
+
+    }
+
+}
+
+
+
