@@ -7,7 +7,9 @@ $grey: #cccccc;
     box-shadow: 0px 0px $blur $grey;
 }
 
-*{ transition: 0.5s}
+* { 
+    transition: 0.5s;
+}
 
 %background{ 
     background-color: $accent;
@@ -104,15 +106,21 @@ body{
                font-size:16px;
                padding:$gap $gap 0;
                height:$gap 5;
+               margin-bottom: 0.5em;
              }
 
-             p{
+            div{
                 text-align:justify;
                 font-size:1.1em;
                 height:0;
                 overflow:hidden;
                 padding:0 $gap;
                 line-height:1.5;
+
+               p{ text-align:justify;
+                    height:7em;
+                    line-height:1.5;}
+       
              }
             
              ul{
@@ -137,21 +145,20 @@ body{
 
             }
 
-
-            
-
-
-
          }
 
          
          &:hover{ 
             @include shadows(30px);
-    
+            
+/* Titre */
+
             header{
                     height: $gap * 10;
                     background-size: 240% auto;
                     margin-top:-10px;
+
+/* Fond blanc qui apparaît devant l'image */
 
                     &::after{
                         content:" ";
@@ -167,9 +174,8 @@ body{
                   
                 }
 
-                p{
-                    height: $gap * 10;
-                   font-size:$gap;
+                div{
+                   height: $gap * 10;
                 }             
     
             }
